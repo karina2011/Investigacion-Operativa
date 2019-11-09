@@ -169,35 +169,12 @@ public class TravelAgentController {
         });
     }
 
-    public boolean cierra(TravelAgent one, ArrayList<TravelAgent>travel){
-        boolean res=false;
-        for (TravelAgent v: travel) {
-            if ((v.getColumn() == one.getRow()) && matriz.size() > 2) {
-                res = true;
-            }
-        }
-        return res;
-    }
 
     public TravelAgent oneTravelAgent(ArrayList<TravelAgent> travel) {
         initializePivote();
         getZeroMatriz();
         getSumMinPivote();
         TravelAgent oneTravel = getMaxPivote();
-        if (cierra(oneTravel,travel)){
-            ArrayList<TravelAgent> aux= matriz.get(oneTravel.getColumn());
-            TravelAgent finalOneTravel2 = oneTravel;
-            aux.forEach(v->{
-                if(v.getRow()== finalOneTravel2.getRow()){
-                    v.setDistance(100000);
-                    v.setPivote(-1);
-                }
-            });
-            initializePivote();
-            getZeroMatriz();
-            getSumMinPivote();
-            oneTravel = getMaxPivote();
-        }
         boolean aux;
         this.matriz.remove(oneTravel.getColumn());
         for (HashMap.Entry<Integer, ArrayList<TravelAgent>> entry : matriz.entrySet()) {

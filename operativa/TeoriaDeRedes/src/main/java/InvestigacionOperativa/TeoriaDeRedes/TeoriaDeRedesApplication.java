@@ -20,16 +20,16 @@ public class TeoriaDeRedesApplication {
 		TravelReturn oneRoad=new TravelReturn();
 		List cities=new ArrayList();
 		cities.add(1);
-        //cities.add(2);
+        cities.add(2);
         cities.add(3);
 		cities.add(5);
 		cities.add(7);
 		cities.add(9);
         cities.add(11);
         cities.add(12);
-        //cities.add(4);
-        //cities.add(10);
-		//cities.add(11);
+        cities.add(4);
+        cities.add(10);
+		cities.add(11);
 
 		oneRoad=road.getEconomicPath(0,cities);
 		oneRoad.getTravel().forEach(v->{
