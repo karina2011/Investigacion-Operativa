@@ -276,9 +276,9 @@ public class TravelAgentController {
         Integer dist[]={0};
         ArrayList<String> listTravel=new ArrayList<>();
         ArrayList<TravelAgent> oneRoad= metodTravelAgent();
-       /*oneRoad.forEach(v->{
-           System.out.println("column "+v.getColumn()+"row"+v.getRow());
-       });*/
+       oneRoad.forEach(v->{
+           System.out.println("column "+v.getColumn()+"row"+v.getRow()+" dist "+v.getDistanceOriginal());
+       });
         oneRoad=orderTravel(oneRoad);
 
         listTravel.add("Mar del Plata");
