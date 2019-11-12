@@ -31,7 +31,7 @@ public class TeoriaDeRedesApplication {
         cities.add(10);
 		cities.add(11);
 
-		oneRoad=road.getEconomicPath(0,cities);
+		oneRoad=road.getEconomicPath(cities);
 		oneRoad.getTravel().forEach(v->{
 			System.out.println(v.toString());
 		});
