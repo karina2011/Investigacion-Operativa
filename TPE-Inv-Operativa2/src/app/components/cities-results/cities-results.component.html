@@ -1,0 +1,11 @@
+<section id="work" class="portfolio-mf sect-pt4 route" *ngIf="results">
+    <div class="container">
+        <h3>Ruta optima:</h3>
+        <hr>
+        <strong *ngFor="let result of results.travel; let i = index;">
+            <ng-container *ngIf="i < results.travel.length-1">{{result}}--></ng-container>
+            <ng-container *ngIf="i == results.travel.length-1">{{result}}</ng-container>
+        </strong>
+        <p>Kilometros: {{results.km}}</p>
+    </div>
+</section>
